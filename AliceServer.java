@@ -43,8 +43,14 @@ public class AliceServer{
 	
 	while ((inputLine = in.readLine()) != null) 
   	{ 
-        	System.out.println ("Alice: " + inputLine); 
-        	out.println(inputLine); 
+			String userEcho = "You: " + inputLine;
+        	String botResponse = "Allice: " + AI.RespondTo(inputLine);
+			
+			System.out.println (userEcho); 
+        	out.println(inputLine);
+        	
+        	System.out.println (botResponse);
+        	out.println(botResponse);
         } 
 	/*
     	out.close(); 
