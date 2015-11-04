@@ -5,9 +5,6 @@
 * The Alice Server Bot that will make simple dynamic replies to the clients messages (questions)
 **/
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class AI {
 
 	//Convert a String line into an String array of the space delimited words
@@ -34,9 +31,5 @@ public class AI {
 
 		
 		return "I'm affraid I have no Idea what you're talking about.";
-	}
-	
-	public interface AliceDatabase {
-		
 	}
 }
