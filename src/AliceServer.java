@@ -49,7 +49,7 @@ public class AliceServer{
 	while ((inputLine = in.readLine()) != null) 
   	{ 
 			String userEcho = "You: " + inputLine;
-        	String botResponse = "Allice: " + AI.getResponse(inputLine);
+        	String botResponse = "Allice: " + getResponse(inputLine);
 			
 			System.out.println (userEcho); 
         	out.println(inputLine);
