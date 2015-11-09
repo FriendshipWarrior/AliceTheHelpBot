@@ -61,12 +61,12 @@ public class AliceServer {
 				formatedResponse = "Alice: " + botResponse;
 
 				if (botResponse != EXIT_CODE) {
-					System.out.print(userEcho);
+					System.out.println(userEcho);
 					System.out.println(formatedResponse);
-					out.println(formatedResponse);
 				} else {
-					System.out.printf("Allice: Goodbye! \n");
+					System.out.printf("Alice: Goodbye! \n");
 				}
+				out.println(formatedResponse);
 			}
 			
 			out.close();

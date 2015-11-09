@@ -53,7 +53,7 @@ public class AliceClient {
 			String incoming = in.readLine();
 
 			if (incoming.equals(EXIT_CODE)) {
-				System.out.printf("Allice: Goodbye! \n");
+				System.out.println("Allice: Goodbye!");
 				break;
 			}
 			
