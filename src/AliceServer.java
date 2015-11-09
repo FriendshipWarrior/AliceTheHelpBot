@@ -15,6 +15,8 @@ import java.io.*;
 
 public class AliceServer{
  
+	public static final String EXIT_CODE = "@@@@SERVER_EXIT"; 
+	
 	public static void main(String[] args) throws IOException { 
     
 	ServerSocket serverSocket = null; 
@@ -197,7 +199,8 @@ public class AliceServer{
 						"web",
 						"online",
 						"canvas",
-						"student portal"
+						"student", 
+						"portal"
 						},
 					"The Canvas student portal may be reached at web adress INSERT HERE"));
 			
@@ -212,6 +215,21 @@ public class AliceServer{
 						"who"
 						},
 					"The chair of accounting is Professor Stanley E Jenne Ph.D."));
+			
+			factDB.put("exit code", new Factoid( 
+					new String[] {
+					    "exit",
+						"good",
+						"bye",
+						"bye",
+						"see",
+						"you",
+						"later",
+						"peace",
+						"out",
+						"goodbye"
+						},
+					EXIT_CODE));
 			
 		}
 		
