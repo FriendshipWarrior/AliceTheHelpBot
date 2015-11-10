@@ -139,7 +139,7 @@ public class AliceServer {
 			}
 		}
 
-		if (potentialFactiods.isEmpty() || potentialFactiods.size() < 3) {
+		if (potentialFactiods.isEmpty()) {
 			// Which ever Factoid appears most in the list of potentials is
 			// selected
 			response = factDB.get("i dont know").getresponse();
