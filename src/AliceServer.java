@@ -139,7 +139,7 @@ public class AliceServer {
 			}
 		}
 
-		if (potentialFactiods.isEmpty()) {
+		if (potentialFactiods.isEmpty() || potentialFactiods.size() < 3) {
 			// Which ever Factoid appears most in the list of potentials is
 			// selected
 			response = factDB.get("i dont know").getresponse();
@@ -232,6 +232,20 @@ public class AliceServer {
 		Map<String, Factoid> DB = new HashMap<String, Factoid>();
 		
 		//TODO: populate this list
+		DB.put("hello", new Factoid( 
+				new String[] {
+						"hi",
+						"hello",
+						"how",
+						"are",
+						"you",
+						"there",
+						"greeting",
+						"cheers"
+				},
+				"Hello there!"));
+		
+		//FIXME
 		DB.put("canvas web address", new Factoid( 
 				new String[] {
 				    "internet",
@@ -243,6 +257,16 @@ public class AliceServer {
 					},
 				"The Canvas student portal may be reached at web adress INSERT HERE"));
 		
+		//FIXME
+		DB.put("library page", new Factoid( 
+				new String[] {
+					"internet",
+					"web",
+					"online",
+					"library"
+					},
+				"The online Library may be reached at the web address INSERT HERE"));
+		
 		DB.put("chair of accounting", new Factoid( 
 				new String[] {
 				    "stanley",
@@ -251,9 +275,78 @@ public class AliceServer {
 					"name",
 					"department",
 					"chair",
-					"who"
+					"who",
+					"is",
+					"the",
+					"finances"
 					},
 				"The chair of accounting is Professor Stanley E Jenne Ph.D."));
+		
+		DB.put("chair of computer science", new Factoid( 
+				new String[] {
+				    "chuck",
+					"allison",
+					"computer",
+					"science",
+					"name",
+					"department",
+					"chair",
+					"who",
+					"is",
+					"the",
+					"cs",
+					"programming"
+					},
+				"The chair of computer science is Professor. Chuck Allison"));
+		
+		DB.put("uvu physical address", new Factoid( 
+				new String[] {
+				    "where",
+					"is",
+					"uvu",
+					"located",
+					"how",
+					"do",
+					"i",
+					"get",
+					"to",
+					"address",
+					"location",
+					"directions"
+					},
+				"UVU is located at 800W University Pkwy, Orem, UT 84058"));
+		
+		DB.put("uvu date founded", new Factoid( 
+				new String[] {
+					"uvu",
+				    "what",
+					"date",
+					"when",
+					"founded",
+					"established",
+					"year",
+					"become",
+					"a",
+					"university",
+					"school",
+					"get",
+					"started",
+					"how",
+					"old",
+					"is"
+					},
+				"UVU was founded in 1941. Wow, that's a long time ago!"));
+		
+		DB.put("alice age", new Factoid( 
+				new String[] {
+				    "how",
+					"old",
+					"are",
+					"you",
+					"is",
+					"alice"
+					},
+				"Alice (that's me!) was \"born\" in November 2015"));
 		
 		DB.put("exit code", new Factoid( 
 				new String[] {
@@ -272,7 +365,7 @@ public class AliceServer {
 		
 		DB.put("i dont know", new Factoid(
 				new String[] {},
-				"I'm affaid I can't do that Dave..."));
+				"I'm affaid I can't answer that... how embarassing "));
 		
 		return DB;
 	}
